@@ -99,7 +99,8 @@ print(classification_report(ytest,ypred))
 # ROC AUC Curve
 fpr,tpr,threshold=roc_curve(ytest,lr_pred_prb)
 auc_lr=roc_auc_score(ytest,lr_pred_prb)
-print(auc_lr)
+print("AUC:  "+ str(auc_lr))
+
 
 def plot_roc_curve(fpr, tpr, label=None):
     plt.figure(figsize=(8,6))
